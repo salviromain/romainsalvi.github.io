@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #3b82f6;
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --bg-dark: #111827;
-    --border-color: #e5e7eb;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --primary-color: #3b82f6;
+    --secondary-color: #2563eb;
+    --accent-color: #60a5fa;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-dark: #020617;
+    --border-color: #334155;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s ease;
 }
 
@@ -68,7 +68,7 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     z-index: 1000;
@@ -147,7 +147,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #020617 100%);
     color: white;
     position: relative;
     padding: 8rem 2rem 4rem;
@@ -205,8 +205,8 @@ section {
 }
 
 .btn-primary {
-    background-color: white;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .btn-primary:hover {
@@ -275,7 +275,7 @@ section {
 
 /* About Section */
 .about {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
 }
 
 .about-content {
@@ -336,7 +336,7 @@ section {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,7 +347,7 @@ section {
 
 /* Skills Section */
 .skills {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
 }
 
 .skills-grid {
@@ -357,11 +357,12 @@ section {
 }
 
 .skill-category {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    border: 1px solid var(--border-color);
 }
 
 .skill-category:hover {
@@ -406,7 +407,7 @@ section {
 
 /* Projects Section */
 .projects {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
 }
 
 .projects-grid {
@@ -429,6 +430,7 @@ section {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
+    background-color: var(--bg-secondary);
 }
 
 .project-icon {
@@ -493,7 +495,7 @@ section {
 
 /* Contact Section */
 .contact {
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
 }
 
 .contact-content {
@@ -550,10 +552,11 @@ section {
 }
 
 .contact-form {
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
 .form-group {
@@ -569,6 +572,8 @@ section {
     font-size: 1rem;
     font-family: inherit;
     transition: var(--transition);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
@@ -635,13 +640,14 @@ section {
         top: 70px;
         left: -100%;
         flex-direction: column;
-        background-color: white;
+        background-color: var(--bg-primary);
         width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: var(--shadow);
         padding: 2rem 0;
         gap: 0;
+        border-top: 1px solid var(--border-color);
     }
 
     .nav-menu.active {
