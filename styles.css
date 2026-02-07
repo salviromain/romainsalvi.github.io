@@ -154,6 +154,114 @@ section {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.hero-showcase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.showcase-item {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    background: rgba(30, 41, 59, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    animation: float var(--duration) infinite ease-in-out;
+    animation-delay: var(--delay);
+}
+
+.showcase-item i {
+    font-size: 1.5rem;
+    color: rgba(96, 165, 250, 0.7);
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(var(--x-mid, 50vw), var(--y-mid, 50vh)) rotate(10deg);
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+.showcase-item:nth-child(1) {
+    --x-mid: 20vw;
+    --y-mid: 40vh;
+    --x-end: 90vw;
+    --y-end: 10vh;
+    top: 10%;
+    left: -10%;
+}
+
+.showcase-item:nth-child(2) {
+    --x-mid: 80vw;
+    --y-mid: 30vh;
+    --x-end: 10vw;
+    --y-end: 90vh;
+    top: 20%;
+    right: -10%;
+}
+
+.showcase-item:nth-child(3) {
+    --x-mid: 30vw;
+    --y-mid: 70vh;
+    --x-end: 95vw;
+    --y-end: 40vh;
+    bottom: 10%;
+    left: -10%;
+}
+
+.showcase-item:nth-child(4) {
+    --x-mid: 70vw;
+    --y-mid: 20vh;
+    --x-end: 5vw;
+    --y-end: 80vh;
+    top: 30%;
+    right: -10%;
+}
+
+.showcase-item:nth-child(5) {
+    --x-mid: 15vw;
+    --y-mid: 60vh;
+    --x-end: 85vw;
+    --y-end: 20vh;
+    bottom: 20%;
+    left: -10%;
+}
+
+.showcase-item:nth-child(6) {
+    --x-mid: 85vw;
+    --y-mid: 50vh;
+    --x-end: 10vw;
+    --y-end: 70vh;
+    top: 40%;
+    right: -10%;
 }
 
 /* Add background image by uncommenting and adding your image path:
@@ -168,6 +276,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-profile {
@@ -838,6 +948,10 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-showcase {
+        display: none;
+    }
+
     .nav-menu {
         position: fixed;
         top: 70px;
