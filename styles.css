@@ -204,73 +204,72 @@ section {
         transform: translate(0, 0) rotate(0deg);
         opacity: 0;
     }
-    10% {
-        opacity: 0.6;
-    }
-    50% {
-        transform: translate(var(--x-mid, 50vw), var(--y-mid, 50vh)) rotate(10deg);
+    5% {
         opacity: 0.8;
     }
-    90% {
-        opacity: 0.6;
+    50% {
+        opacity: 0.9;
+    }
+    95% {
+        opacity: 0.8;
     }
     100% {
-        transform: translate(var(--x-end, 100vw), var(--y-end, 100vh)) rotate(20deg);
+        transform: translate(calc(var(--x-end) - var(--x-start)), calc(var(--y-end) - var(--y-start))) rotate(20deg);
         opacity: 0;
     }
 }
 
 .showcase-item:nth-child(1) {
-    --x-mid: 30vw;
-    --y-mid: 35vh;
-    --x-end: 80vw;
-    --y-end: 15vh;
+    --x-start: 0vw;
+    --y-start: 0vh;
+    --x-end: 85vw;
+    --y-end: 70vh;
     top: 10%;
     left: 5%;
 }
 
 .showcase-item:nth-child(2) {
-    --x-mid: 75vw;
-    --y-mid: 25vh;
-    --x-end: 20vw;
-    --y-end: 85vh;
-    top: 20%;
+    --x-start: 0vw;
+    --y-start: 0vh;
+    --x-end: -70vw;
+    --y-end: 65vh;
+    top: 15%;
     right: 5%;
 }
 
 .showcase-item:nth-child(3) {
-    --x-mid: 35vw;
-    --y-mid: 65vh;
-    --x-end: 85vw;
-    --y-end: 35vh;
-    bottom: 10%;
+    --x-start: 0vw;
+    --y-start: 0vh;
+    --x-end: 80vw;
+    --y-end: -50vh;
+    bottom: 15%;
     left: 5%;
 }
 
 .showcase-item:nth-child(4) {
-    --x-mid: 65vw;
-    --y-mid: 20vh;
-    --x-end: 15vw;
-    --y-end: 75vh;
-    top: 30%;
+    --x-start: 0vw;
+    --y-start: 0vh;
+    --x-end: -75vw;
+    --y-end: 50vh;
+    top: 25%;
     right: 5%;
 }
 
 .showcase-item:nth-child(5) {
-    --x-mid: 25vw;
-    --y-mid: 55vh;
-    --x-end: 75vw;
-    --y-end: 25vh;
-    bottom: 20%;
+    --x-start: 0vw;
+    --y-start: 0vh;
+    --x-end: 70vw;
+    --y-end: -40vh;
+    bottom: 25%;
     left: 5%;
 }
 
 .showcase-item:nth-child(6) {
-    --x-mid: 70vw;
-    --y-mid: 45vh;
-    --x-end: 20vw;
-    --y-end: 65vh;
-    top: 40%;
+    --x-start: 0vw;
+    --y-start: 0vh;
+    --x-end: -65vw;
+    --y-end: 35vh;
+    top: 35%;
     right: 5%;
 }
 
