@@ -144,36 +144,23 @@ section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1e293b 100%);
     color: white;
     position: relative;
-    padding: 8rem 2rem 0;
+    padding: 8rem 2rem 4rem;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow: hidden;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('Images/chicago.jpg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
-    z-index: 0;
+/* Add background image by uncommenting and adding your image path:
+.hero {
+    background-image: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 64, 175, 0.8) 50%, rgba(30, 41, 59, 0.8) 100%), url('path/to/your/hero-background.jpg');
 }
-
-.hero > * {
-    position: relative;
-    z-index: 1;
-}
+*/
 
 .hero-content {
     max-width: 800px;
@@ -181,27 +168,32 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    flex: 0;
-    padding-top: 2rem;
 }
 
 .hero-profile {
-    position: absolute;
-    bottom: 0;
-    right: 10%;
-    height: 60vh;
-    max-height: 600px;
-    z-index: 2;
-    display: flex;
-    align-items: flex-end;
+    margin-bottom: 2rem;
 }
 
-.hero-profile img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    object-position: bottom;
+.hero-profile .image-placeholder {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: white;
+    box-shadow: var(--shadow-lg);
+    margin: 0 auto;
+}
+
+.hero-profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
 }
 
 .hero-title {
@@ -292,11 +284,8 @@ section {
 .scroll-indicator {
     position: absolute;
     bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
     font-size: 2rem;
     animation: bounce 2s infinite;
-    z-index: 10;
 }
 
 @keyframes bounce {
@@ -868,12 +857,11 @@ section {
         font-size: 1.25rem;
     }
 
-    .hero-profile {
-        position: relative;
-        right: auto;
-        height: 40vh;
-        max-height: 400px;
-        margin-top: 2rem;
+    .hero-profile .image-placeholder,
+    .hero-profile-image {
+        width: 150px;
+        height: 150px;
+        font-size: 4rem;
     }
 
     .section-title {
@@ -947,12 +935,7 @@ section {
     }
 
     .hero {
-        padding: 6rem 1rem 0;
-    }
-
-    .hero-profile {
-        height: 35vh;
-        max-height: 300px;
+        padding: 6rem 1rem 3rem;
     }
 
     .hero-title {
