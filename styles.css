@@ -172,30 +172,30 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 1.5rem;
+    gap: 0.75rem;
+    padding: 1.5rem 2rem;
     background: rgba(30, 41, 59, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(96, 165, 250, 0.3);
     border-radius: 1rem;
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
+    font-size: 1rem;
     animation: float var(--duration) infinite ease-in-out;
     animation-delay: var(--delay);
     transition: transform 0.1s ease-out;
 }
 
 .showcase-img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
-    padding: 0.25rem;
+    padding: 0.5rem;
 }
 
 .showcase-item i {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: rgba(96, 165, 250, 0.7);
 }
 
@@ -221,57 +221,57 @@ section {
 }
 
 .showcase-item:nth-child(1) {
-    --x-mid: 20vw;
-    --y-mid: 40vh;
-    --x-end: 90vw;
-    --y-end: 10vh;
+    --x-mid: 30vw;
+    --y-mid: 35vh;
+    --x-end: 80vw;
+    --y-end: 15vh;
     top: 10%;
-    left: -10%;
+    left: 5%;
 }
 
 .showcase-item:nth-child(2) {
-    --x-mid: 80vw;
-    --y-mid: 30vh;
-    --x-end: 10vw;
-    --y-end: 90vh;
+    --x-mid: 75vw;
+    --y-mid: 25vh;
+    --x-end: 20vw;
+    --y-end: 85vh;
     top: 20%;
-    right: -10%;
+    right: 5%;
 }
 
 .showcase-item:nth-child(3) {
-    --x-mid: 30vw;
-    --y-mid: 70vh;
-    --x-end: 95vw;
-    --y-end: 40vh;
+    --x-mid: 35vw;
+    --y-mid: 65vh;
+    --x-end: 85vw;
+    --y-end: 35vh;
     bottom: 10%;
-    left: -10%;
+    left: 5%;
 }
 
 .showcase-item:nth-child(4) {
-    --x-mid: 70vw;
+    --x-mid: 65vw;
     --y-mid: 20vh;
-    --x-end: 5vw;
-    --y-end: 80vh;
+    --x-end: 15vw;
+    --y-end: 75vh;
     top: 30%;
-    right: -10%;
+    right: 5%;
 }
 
 .showcase-item:nth-child(5) {
-    --x-mid: 15vw;
-    --y-mid: 60vh;
-    --x-end: 85vw;
-    --y-end: 20vh;
+    --x-mid: 25vw;
+    --y-mid: 55vh;
+    --x-end: 75vw;
+    --y-end: 25vh;
     bottom: 20%;
-    left: -10%;
+    left: 5%;
 }
 
 .showcase-item:nth-child(6) {
-    --x-mid: 85vw;
-    --y-mid: 50vh;
-    --x-end: 10vw;
-    --y-end: 70vh;
+    --x-mid: 70vw;
+    --y-mid: 45vh;
+    --x-end: 20vw;
+    --y-end: 65vh;
     top: 40%;
-    right: -10%;
+    right: 5%;
 }
 
 /* Add background image by uncommenting and adding your image path:
