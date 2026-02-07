@@ -206,6 +206,24 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Parallax effect for hero showcase
+const heroShowcase = document.querySelector('.hero-showcase');
+if (heroShowcase) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const showcaseItems = document.querySelectorAll('.showcase-item');
+        
+        showcaseItems.forEach((item, index) => {
+            // Different parallax speeds for each item
+            const speed = 0.3 + (index * 0.1);
+            const yPos = scrolled * speed;
+            const xPos = Math.sin(scrolled * 0.001 + index) * 20;
+            
+            item.style.transform = `translate(${xPos}px, ${yPos}px)`;
+        });
+    });
+}
+
 // Preload animation on page load
 window.addEventListener('load', () => {
     document.body.style.opacity = '0';

@@ -174,14 +174,24 @@ section {
     align-items: center;
     gap: 0.5rem;
     padding: 1rem 1.5rem;
-    background: rgba(30, 41, 59, 0.3);
+    background: rgba(30, 41, 59, 0.4);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(96, 165, 250, 0.2);
+    border: 1px solid rgba(96, 165, 250, 0.3);
     border-radius: 1rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
     animation: float var(--duration) infinite ease-in-out;
     animation-delay: var(--delay);
+    transition: transform 0.1s ease-out;
+}
+
+.showcase-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.25rem;
 }
 
 .showcase-item i {
