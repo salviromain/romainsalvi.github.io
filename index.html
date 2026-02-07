@@ -20,6 +20,7 @@
             </button>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -27,16 +28,43 @@
         </div>
     </nav>
 
-    <!-- Hero & About Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-profile">
+                <div class="image-placeholder">
+                    <i class="fas fa-user"></i>
+                </div>
+                <!-- Uncomment and replace with your photo:
+                <img src="path/to/your/photo.jpg" alt="Romain" class="hero-profile-image">
+                -->
+            </div>
+            <h1 class="hero-title">Hi, I'm <span class="highlight">Romain</span></h1>
+            <p class="hero-subtitle">AI Research Intern at Pirouette Software Inc. (Chicago, IL)</p>
+            <p class="hero-description">Passionate about building innovative solutions and extracting insights from data</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/salviromain" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/romain-salvi-DSML" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:salvir.main@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="hero-combined">
-                <div class="hero-left">
-                    <h1 class="hero-title">Hi, I'm <span class="highlight">Romain</span></h1>
-                    <p class="hero-subtitle">AI Research Intern at Pirouette Software Inc. (Chicago, IL)</p>
-                    <p class="hero-description">I'm a passionate Computer Science and Data Science student with a keen interest in machine learning, data analysis, and software development. I love solving complex problems and building projects that make a difference.</p>
-                    <p class="hero-description">Currently pursuing my degree, I'm constantly learning new technologies and applying them to real-world challenges. My goal is to leverage data-driven insights to create innovative solutions.</p>
-                    
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate Computer Science and Data Science student with a keen interest in machine learning, data analysis, and software development. I love solving complex problems and building projects that make a difference.</p>
+                    <p>Currently pursuing my degree, I'm constantly learning new technologies and applying them to real-world challenges. My goal is to leverage data-driven insights to create innovative solutions.</p>
                     <div class="about-stats">
                         <div class="stat">
                             <span class="stat-number">3+</span>
@@ -51,51 +79,49 @@
                             <span class="stat-label">Technologies</span>
                         </div>
                     </div>
-
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://github.com/salviromain" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/romain-salvi-DSML" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="mailto:salvir.main@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                    </div>
                 </div>
-
-                <div class="hero-right">
-                    <div class="profile-image-container">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <!-- Uncomment and replace with your photo:
-                        <img src="path/to/your/photo.jpg" alt="Romain" class="profile-image">
-                        -->
-                    </div>
-
-                    <div class="affiliations">
-                        <h3>Education & Experience</h3>
-                        <div class="affiliation-logos">
-                            <div class="logo-item">
-                                <img src="path/to/school1-logo.png" alt="School 1" class="affiliation-logo">
+                <div class="about-education">
+                    <h3 class="education-title">Education & Experience</h3>
+                    <div class="education-items">
+                        <div class="education-item">
+                            <div class="education-logo">
+                                <img src="path/to/school1-logo.png" alt="School 1">
                                 <!-- <div class="logo-placeholder"><i class="fas fa-university"></i></div> -->
                             </div>
-                            <div class="logo-item">
-                                <img src="path/to/school2-logo.png" alt="School 2" class="affiliation-logo">
+                            <div class="education-details">
+                                <h4>University of Illinois Chicago</h4>
+                                <p class="education-degree">M.Sc. Computer Science</p>
+                                <p class="education-date">2024 - 2026</p>
+                                <p class="education-description">Brief description of your studies, achievements, or focus areas.</p>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-logo">
+                                <img src="path/to/school2-logo.png" alt="School 2">
                                 <!-- <div class="logo-placeholder"><i class="fas fa-graduation-cap"></i></div> -->
                             </div>
-                            <div class="logo-item">
-                                <img src="path/to/company-logo.png" alt="Pirouette Software Inc." class="affiliation-logo">
+                            <div class="education-details">
+                                <h4>School/University Name 2</h4>
+                                <p class="education-degree">Degree Program</p>
+                                <p class="education-date">Year - Year</p>
+                                <p class="education-description">Brief description of your studies, achievements, or focus areas.</p>
+                            </div>
+                        </div>
+                        <div class="education-item">
+                            <div class="education-logo">
+                                <img src="path/to/company-logo.png" alt="Pirouette Software Inc.">
                                 <!-- <div class="logo-placeholder"><i class="fas fa-building"></i></div> -->
+                            </div>
+                            <div class="education-details">
+                                <h4>Pirouette Software Inc.</h4>
+                                <p class="education-degree">AI Research Intern</p>
+                                <p class="education-date">Start Date - Present/End Date</p>
+                                <p class="education-description">Description of your role, responsibilities, and key achievements.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -107,7 +133,7 @@
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-robot"></i>
-                        <!-- <img src="path/to/your/image1.jpg" alt="Machine Learning Project"> -->
+                        <img src="Images/LLMAgent.webp" alt="Machine Learning Project"> 
                     </div>
                     <h3>Does Empathetic AI Language Cause User Attachment?</h3>
                     <p>A causal inference study on real-world chatbot conversations. Currently under work for publication.</p>
@@ -140,59 +166,11 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-globe"></i>
-                        <!-- <img src="path/to/your/image3.jpg" alt="Full-Stack Web Application"> -->
-                    </div>
-                    <h3>Full-Stack Web Application</h3>
-                    <p>Developed a full-stack application with user authentication, RESTful API, and responsive UI.</p>
-                    <div class="project-tags">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/project3" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="path/to/your/project3.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                    </div>
-                </div>
+                
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-database"></i>
-                        <!-- <img src="path/to/your/image4.jpg" alt="Data Pipeline System"> -->
-                    </div>
-                    <h3>Data Pipeline System</h3>
-                    <p>Automated ETL pipeline for processing and analyzing large-scale datasets with scheduled jobs.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>SQL</span>
-                        <span>Apache Airflow</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/project4" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="path/to/your/project4.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                    </div>
-                </div>
+                
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-comments"></i>
-                        <!-- <img src="path/to/your/image5.jpg" alt="NLP Chatbot"> -->
-                    </div>
-                    <h3>NLP Chatbot</h3>
-                    <p>Intelligent chatbot using natural language processing to understand and respond to user queries.</p>
-                    <div class="project-tags">
-                        <span>Python</span>
-                        <span>NLP</span>
-                        <span>Flask</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/project5" target="_blank"><i class="fab fa-github"></i> Code</a>
-                        <a href="path/to/your/project5.pdf" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a>
-                    </div>
-                </div>
+                
 
                 <div class="project-card">
                     <div class="project-image">
