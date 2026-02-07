@@ -173,104 +173,74 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    padding: 1.5rem 2rem;
-    background: rgba(30, 41, 59, 0.4);
+    padding: 1rem 1.5rem;
+    background: rgba(30, 41, 59, 0.9);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(96, 165, 250, 0.3);
-    border-radius: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
-    animation: float var(--duration) infinite ease-in-out;
-    animation-delay: var(--delay);
-    transition: transform 0.1s ease-out;
+    border-radius: 0.75rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
 .showcase-img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     border-radius: 0.5rem;
     background: rgba(255, 255, 255, 0.1);
     padding: 0.5rem;
 }
 
-.showcase-item i {
-    font-size: 2.5rem;
-    color: rgba(96, 165, 250, 0.7);
+.showcase-item:hover {
+    transform: scale(1.05);
+    border-color: rgba(59, 130, 246, 0.5);
 }
 
-@keyframes float {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-        opacity: 0;
-    }
-    5% {
-        opacity: 0.8;
-    }
-    50% {
-        opacity: 0.9;
-    }
-    95% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: translate(calc(var(--x-end) - var(--x-start)), calc(var(--y-end) - var(--y-start))) rotate(20deg);
-        opacity: 0;
-    }
+/* Left side banners */
+.hero-showcase > div:nth-child(-n+4) {
+    position: absolute;
+    left: 1rem;
 }
 
 .showcase-item:nth-child(1) {
-    --x-start: 0vw;
-    --y-start: 0vh;
-    --x-end: 85vw;
-    --y-end: 70vh;
-    top: 10%;
-    left: 5%;
+    top: 5%;
 }
 
 .showcase-item:nth-child(2) {
-    --x-start: 0vw;
-    --y-start: 0vh;
-    --x-end: -70vw;
-    --y-end: 65vh;
-    top: 15%;
-    right: 5%;
+    top: 28%;
 }
 
 .showcase-item:nth-child(3) {
-    --x-start: 0vw;
-    --y-start: 0vh;
-    --x-end: 80vw;
-    --y-end: -50vh;
-    bottom: 15%;
-    left: 5%;
+    top: 51%;
 }
 
 .showcase-item:nth-child(4) {
-    --x-start: 0vw;
-    --y-start: 0vh;
-    --x-end: -75vw;
-    --y-end: 50vh;
-    top: 25%;
-    right: 5%;
+    top: 74%;
+}
+
+/* Right side banners */
+.hero-showcase > div:nth-child(n+5) {
+    position: absolute;
+    right: 1rem;
 }
 
 .showcase-item:nth-child(5) {
-    --x-start: 0vw;
-    --y-start: 0vh;
-    --x-end: 70vw;
-    --y-end: -40vh;
-    bottom: 25%;
-    left: 5%;
+    top: 5%;
 }
 
 .showcase-item:nth-child(6) {
-    --x-start: 0vw;
-    --y-start: 0vh;
-    --x-end: -65vw;
-    --y-end: 35vh;
-    top: 35%;
-    right: 5%;
+    top: 28%;
+}
+
+.showcase-item:nth-child(7) {
+    top: 51%;
+}
+
+.showcase-item:nth-child(8) {
+    top: 74%;
 }
 
 /* Add background image by uncommenting and adding your image path:
