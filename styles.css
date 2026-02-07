@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #d4a574;
-    --secondary-color: #b8935f;
-    --accent-color: #e6c299;
-    --text-primary: #f5f5f0;
-    --text-secondary: #c7c7bd;
-    --bg-primary: #1a1410;
-    --bg-secondary: #251d17;
-    --bg-dark: #0d0b08;
-    --border-color: #3d342b;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    --primary-color: #3b82f6;
+    --secondary-color: #2563eb;
+    --accent-color: #60a5fa;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-dark: #020617;
+    --border-color: #334155;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
     --transition: all 0.3s ease;
 }
 
@@ -68,7 +68,7 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(26, 20, 16, 0.95);
+    background-color: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     z-index: 1000;
@@ -147,11 +147,20 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #2d231c 0%, #1a1410 50%, #0d0b08 100%);
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #1e293b 100%);
     color: white;
     position: relative;
     padding: 8rem 2rem 4rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
+/* Add background image by uncommenting and adding your image path:
+.hero {
+    background-image: linear-gradient(135deg, rgba(30, 58, 138, 0.8) 0%, rgba(30, 64, 175, 0.8) 50%, rgba(30, 41, 59, 0.8) 100%), url('path/to/your/hero-background.jpg');
+}
+*/
 
 .hero-content {
     max-width: 800px;
@@ -195,7 +204,7 @@ section {
 }
 
 .highlight {
-    background: linear-gradient(120deg, #d4a574 0%, #e6c299 100%);
+    background: linear-gradient(120deg, #60a5fa 0%, #93c5fd 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -352,8 +361,8 @@ section {
 
 .education-logo {
     flex-shrink: 0;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -367,15 +376,15 @@ section {
 }
 
 .education-logo .logo-placeholder {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     background-color: var(--bg-primary);
     border: 2px solid var(--border-color);
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 3.5rem;
     color: var(--text-secondary);
 }
 
@@ -409,6 +418,37 @@ section {
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.8;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.about-image-item {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: linear-gradient(135deg, var(--bg-secondary), var(--border-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-image-placeholder {
+    font-size: 3rem;
+    color: var(--text-secondary);
+    opacity: 0.3;
 }
 
 .about-stats {
@@ -840,6 +880,10 @@ section {
 
     .education-logo {
         margin: 0 auto;
+    }
+
+    .about-images {
+        grid-template-columns: 1fr;
     }
 
     .image-placeholder {
