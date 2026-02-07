@@ -183,7 +183,6 @@ section {
     width: 200px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
-    animation: slideDown 20s linear infinite;
 }
 
 .showcase-img {
@@ -200,63 +199,48 @@ section {
     border-color: rgba(59, 130, 246, 0.5);
 }
 
-@keyframes slideDown {
-    0% {
-        transform: translateY(-120%);
-        opacity: 0;
-    }
-    5% {
-        opacity: 1;
-    }
-    95% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(calc(100vh + 120%));
-        opacity: 0;
-    }
-}
-
 /* Left side banners */
-.showcase-item:nth-child(odd) {
+.hero-showcase > div:nth-child(-n+4) {
+    position: absolute;
     left: 1rem;
 }
 
 .showcase-item:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.showcase-item:nth-child(3) {
-    animation-delay: 2.5s;
-}
-
-.showcase-item:nth-child(5) {
-    animation-delay: 5s;
-}
-
-.showcase-item:nth-child(7) {
-    animation-delay: 7.5s;
-}
-
-/* Right side banners */
-.showcase-item:nth-child(even) {
-    right: 1rem;
+    top: 5%;
 }
 
 .showcase-item:nth-child(2) {
-    animation-delay: 0s;
+    top: 28%;
+}
+
+.showcase-item:nth-child(3) {
+    top: 51%;
 }
 
 .showcase-item:nth-child(4) {
-    animation-delay: 2.5s;
+    top: 74%;
+}
+
+/* Right side banners */
+.hero-showcase > div:nth-child(n+5) {
+    position: absolute;
+    right: 1rem;
+}
+
+.showcase-item:nth-child(5) {
+    top: 5%;
 }
 
 .showcase-item:nth-child(6) {
-    animation-delay: 5s;
+    top: 28%;
+}
+
+.showcase-item:nth-child(7) {
+    top: 51%;
 }
 
 .showcase-item:nth-child(8) {
-    animation-delay: 7.5s;
+    top: 74%;
 }
 
 /* Add background image by uncommenting and adding your image path:
