@@ -6,17 +6,17 @@
 }
 
 :root {
-    --primary-color: #3b82f6;
-    --secondary-color: #2563eb;
-    --accent-color: #60a5fa;
-    --text-primary: #f9fafb;
-    --text-secondary: #d1d5db;
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-dark: #020617;
-    --border-color: #334155;
-    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    --primary-color: #d4a574;
+    --secondary-color: #b8935f;
+    --accent-color: #e6c299;
+    --text-primary: #f5f5f0;
+    --text-secondary: #c7c7bd;
+    --bg-primary: #1a1410;
+    --bg-secondary: #251d17;
+    --bg-dark: #0d0b08;
+    --border-color: #3d342b;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
     --transition: all 0.3s ease;
 }
 
@@ -68,7 +68,7 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(15, 23, 42, 0.95);
+    background-color: rgba(26, 20, 16, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow);
     z-index: 1000;
@@ -147,7 +147,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #020617 100%);
+    background: linear-gradient(135deg, #2d231c 0%, #1a1410 50%, #0d0b08 100%);
     color: white;
     position: relative;
     padding: 8rem 2rem 4rem;
@@ -166,7 +166,7 @@ section {
 }
 
 .highlight {
-    background: linear-gradient(120deg, #fbbf24 0%, #f59e0b 100%);
+    background: linear-gradient(120deg, #d4a574 0%, #e6c299 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -433,17 +433,28 @@ section {
     background-color: var(--bg-secondary);
 }
 
-.project-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    border-radius: 1rem;
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--border-color));
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.75rem;
-    color: white;
-    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 3rem;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-image i {
+    opacity: 0.3;
 }
 
 .project-card h3 {
