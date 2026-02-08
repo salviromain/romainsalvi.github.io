@@ -438,7 +438,7 @@ a.showcase-item {
 }
 
 .org-link {
-    color: var(--primary-color);
+    color: #10b981;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: var(--transition);
@@ -448,8 +448,8 @@ a.showcase-item {
 }
 
 .org-link:hover {
-    border-bottom-color: var(--primary-color);
-    color: #60a5fa;
+    border-bottom-color: #10b981;
+    color: #34d399;
 }
 
 .inline-org-icon {
@@ -461,13 +461,21 @@ a.showcase-item {
 }
 
 .org-link-inline {
-    color: var(--primary-color);
+    color: #10b981;
     text-decoration: none;
     transition: var(--transition);
 }
 
 .org-link-inline:hover {
-    color: #60a5fa;
+    color: #34d399;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
 
 .about-sections {
