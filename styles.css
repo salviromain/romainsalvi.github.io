@@ -856,6 +856,20 @@ a.showcase-item {
     gap: 4rem;
 }
 
+.contact-content-centered {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-content-centered .contact-methods {
+    align-items: center;
+}
+
+.contact-content-centered .contact-method {
+    justify-content: center;
+}
+
 .contact-info h3 {
     font-size: 2rem;
     margin-bottom: 1rem;

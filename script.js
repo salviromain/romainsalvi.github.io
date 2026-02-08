@@ -89,7 +89,7 @@ animatedElements.forEach(el => {
 // Contact form handling
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         // Get form data
@@ -100,17 +100,38 @@ if (contactForm) {
             message: document.getElementById('message').value
         };
         
-        // Here you would typically send the data to a server
-        // For now, we'll just show a success message
-        alert('Thank you for your message! I will get back to you soon.');
+        // Show loading state
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
         
-        // Reset form
-        contactForm.reset();
-        
-        // In a real application, you might use:
-        // - EmailJS for client-side email sending
-        // - A backend API endpoint
-        // - Form services like Formspree or Netlify Forms
+        try {
+            // Send to backend API
+            const response = await fetch('http://localhost:3000/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+            
+            const data = await response.json();
+            
+            if (response.ok) {
+                alert('Thank you for your message! I will get back to you soon.');
+                contactForm.reset();
+            } else {
+                alert('Failed to send message. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message. Please try again.');
+        } finally {
+            // Restore button state
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }
     });
 }
 
