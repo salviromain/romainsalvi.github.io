@@ -427,14 +427,47 @@ a.showcase-item {
 .about-description {
     max-width: 900px;
     margin: 0 auto 3rem;
-    text-align: center;
+    text-align: left;
 }
 
 .about-description p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
     line-height: 1.8;
+}
+
+.org-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.org-link:hover {
+    border-bottom-color: var(--primary-color);
+    color: #60a5fa;
+}
+
+.inline-org-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.org-link-inline {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.org-link-inline:hover {
+    color: #60a5fa;
 }
 
 .about-sections {
